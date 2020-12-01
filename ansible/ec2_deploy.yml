@@ -13,6 +13,6 @@
         assigh_public_ip: yes
         wait: yes
         count: 1
-        aws_access_key_id= "{{ASIA3DLCSB772U2L3WPQ}}" 
-        aws_secret_key= "{{PTzVFqv6QFSK07t4BldPohPmZYXckjJDlTkZ4MzT}}" 
-        security_token= "{{FwoGZXIvYXdzEBsaDDjNCkG+FxxQ44Fx/iLCAVagL0x4l0Ly1xOXNPK3noPG7JcJFhsXr7c+D5AimDGEsT53iUXMnTCHqQfcDdCGhraoetE5e7JXHSE3dOLTJjIs/55cbU33DwzDlkaVv2YrMX3RQ2IUAus7Hj8hq5AvpKujQbMWTEvYU1L7LDGcITNkshP5PUNJMJGG3CEnPLXVPjo3ycdeUJsKs9Dhzpn8UhVli1Ja4fLUkHAB5+jcEE5fqzsDH+Jey0qBYen3uLiTRPrV176Hw4OZsysQZOg5GtOkKLL+mf4FMi1N5S8sg2TQ4ifobFmQJKZj/ivVkdu2UUnF87QN2D+KcwIhiV+kf4uDNBNAMr0=}}"
+        aws_access_key_id= "{{access_key}}" 
+        aws_secret_key= "{{secret_key}}" 
+        security_token= "{{session_token}}"
