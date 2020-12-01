@@ -1,0 +1,18 @@
+- name: Deploy to EC2
+  hosts: localhost
+  connection: local
+
+  tasks: 
+    - name: Launch EC2 instance
+      ec2: 
+        instance_type: t2.micro
+        image: ami-00ddb0e5626798373
+        region: us-east-1
+        key_name: test
+        vpc_subnet_id: subnet-a0a6f3ed
+        assigh_public_ip: yes
+        wait: yes
+        count: 1
+        aws_access_key_id= "{{ASIA3DLCSB772U2L3WPQ}}" 
+        aws_secret_key= "{{PTzVFqv6QFSK07t4BldPohPmZYXckjJDlTkZ4MzT}}" 
+        security_token= "{{FwoGZXIvYXdzEBsaDDjNCkG+FxxQ44Fx/iLCAVagL0x4l0Ly1xOXNPK3noPG7JcJFhsXr7c+D5AimDGEsT53iUXMnTCHqQfcDdCGhraoetE5e7JXHSE3dOLTJjIs/55cbU33DwzDlkaVv2YrMX3RQ2IUAus7Hj8hq5AvpKujQbMWTEvYU1L7LDGcITNkshP5PUNJMJGG3CEnPLXVPjo3ycdeUJsKs9Dhzpn8UhVli1Ja4fLUkHAB5+jcEE5fqzsDH+Jey0qBYen3uLiTRPrV176Hw4OZsysQZOg5GtOkKLL+mf4FMi1N5S8sg2TQ4ifobFmQJKZj/ivVkdu2UUnF87QN2D+KcwIhiV+kf4uDNBNAMr0=}}"
