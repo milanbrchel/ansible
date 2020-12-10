@@ -5,7 +5,7 @@
   tasks: 
     - name: Launch EC2 instance
       ec2: 
-        instance_type: t2.micro
+        instance_type: t2.small
         image: ami-00ddb0e5626798373
         region: us-east-1
         key_name: test
@@ -45,7 +45,7 @@
       become: yes
     - name: Get project files from git
       git:
-        repo: 'https://github.com/milanbrchel/docker.git'
+        repo: 'https://github.com/milanbrchel/4IT572_ZS_2020_circleci.git'
         dest: ./app
     - name: Build docker with eshop
       shell: cd app && docker build -t myeshop:latest .
@@ -53,7 +53,7 @@
     - name: Run Docker with eshop
       shell: docker run -p 80:3000 myeshop
       async: 45
-      poll: 10
+      poll: 0
       become: yes
     - wait_for: 
         port: 80
